@@ -1,0 +1,114 @@
+{
+    "controls": [
+        {
+            "name": "firstName",
+            "label": "First name",
+            "value": "",
+            "type": "text",
+            "validators": {
+                "required": true,
+                "minLength": 4
+            }
+        },
+        {
+            "name": "lastName",
+            "label": "Last name",
+            "value": "",
+            "type": "text",
+            "validators": {
+                "required": true,
+                "minLength": 5
+            }
+        },
+        {
+            "name": "comments",
+            "label": "Comments",
+            "value": "",
+            "type": "textarea",
+            "validators": {}
+        },
+        {
+            "name": "agreeTerms",
+            "label": "Do you agree?",
+            "value": true,
+            "type": "checkbox",
+            "required": true,
+            "validators": {
+                "required": true
+            }
+        },
+        {
+            "name": "lightDark",
+            "label": "Toggle dark mode",
+            "value": true,
+            "type": "toggle",
+            "required": true,
+            "validators": {
+                "required": true
+            }
+        },
+        {
+            "name": "size",
+            "label": "Size",
+            "value": "50",
+            "type": "range",
+            "options": {
+                "min": "0",
+                "max": "100",
+                "step": "1",
+                "icon": "sunny"
+            },
+            "validators": {}
+        },
+        {
+            "name": "address",
+            "label": "Address",
+            "value": "",
+            "type": "text",
+            "controlType": "nested",
+            "controls": [
+                {
+                    "name": "street",
+                    "label": "Street",
+                    "value": "",
+                    "type": "text",
+                    "required": true,
+                    "validators": {
+                        "required": true
+                    }
+                },
+                {
+                    "name": "city",
+                    "label": "City",
+                    "value": "",
+                    "type": "text",
+                    "required": true,
+                    "validators": {
+                        "required": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "emails",
+            "label": "Emails",
+            "value": [
+                "example@example.com"
+            ],
+            "type": "email",
+            "controlType": "array",
+            "controls": [
+                {
+                    "name": "email",
+                    "label": "Email",
+                    "value": "",
+                    "type": "text",
+                    "validators": {
+                        "required": true,
+                        "email": true
+                    }
+                }
+            ]
+        }
+    ]
+}
